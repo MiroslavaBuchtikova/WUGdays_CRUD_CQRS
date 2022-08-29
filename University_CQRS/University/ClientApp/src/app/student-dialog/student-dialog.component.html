@@ -1,0 +1,104 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add/Update student</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="ssn">SSN</label>
+        <div class="input-group">
+          <input [disabled]="update" id="ssn" [(ngModel)]="student.ssn" type="text">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="name">Name</label>
+        <div class="input-group">
+          <input id="name" [(ngModel)]="student.name" type="text">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input id="email" [(ngModel)]="student.email" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <label for="course1">Course1</label>
+        <div class="input-group">
+          <div id="course1" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedCourse1?.name}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ng-container *ngFor="let course of courses">
+                <button ngbDropdownItem on-click="setupCourse1(course)">{{course.name}}</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="course1">Grade1</label>
+        <div class="input-group">
+          <div id="credits1" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{selectedGrade1}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ng-container *ngFor="let grade of grades">
+                <button ngbDropdownItem on-click="selectedGrade1 = grade">{{grade}}</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="disenrollment1">DisenrollmentComment</label>
+        <div class="input-group">
+          <input id="disenrollment1" [(ngModel)]="student.course1DisenrollmentComment" type="text">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="course2">Course2</label>
+        <div class="input-group">
+          <div id="course2" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownCourse2" ngbDropdownToggle>{{selectedCourse2?.name}}
+            </button>
+
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <ng-container *ngFor="let course of courses">
+                <button on-click="setupCourse2(course)" ngbDropdownItem>{{course.name}}</button>
+                </ng-container>
+              </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="course1">Grade2</label>
+        <div class="input-group">
+          <div id="grade2" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{selectedGrade2}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ng-container *ngFor="let grade of grades">
+                <button ngbDropdownItem on-click="selectedGrade2 = grade">{{grade}}</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="disenrollment2">DisenrollmentComment</label>
+        <div class="input-group">
+          <input id="disenrollment2" [(ngModel)]="student.course2DisenrollmentComment" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="passBack()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>
