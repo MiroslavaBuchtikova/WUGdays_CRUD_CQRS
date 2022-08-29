@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/University/University/ClientApp" libraries="{WUGdays_University_CRUD_CQRS/University/University/ClientApp/node_modules}" />
+    <file url="file://$PROJECT_DIR$/University/University_CRUD/ClientApp" libraries="{WUGdays_University_CRUD_CQRS/University/University/ClientApp/node_modules}" />
+  </component>
+</project>
