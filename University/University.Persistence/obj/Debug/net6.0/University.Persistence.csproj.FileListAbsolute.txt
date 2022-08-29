@@ -1,0 +1,12 @@
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/bin/Debug/net6.0/University.Persistence.deps.json
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/bin/Debug/net6.0/University.Persistence.dll
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/bin/Debug/net6.0/University.Persistence.pdb
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.AssemblyReference.cache
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.AssemblyInfoInputs.cache
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.AssemblyInfo.cs
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.CoreCompileInputs.cache
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.dll
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/refint/University.Persistence.dll
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/University.Persistence.pdb
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University/University.Persistence/obj/Debug/net6.0/ref/University.Persistence.dll
