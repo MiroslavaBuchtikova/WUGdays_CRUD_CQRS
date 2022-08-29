@@ -1,4 +1,6 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using University.Persistence.Context;
 using University.Persistence.Entities.Students;
 using University.Services;
@@ -17,9 +19,11 @@ namespace University
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHealthChecks();
+            
             services.AddControllersWithViews();
             services.AddTransient<StudentService>();
-
+            
+            services.AddRepositories().AddMediatR(Assembly.GetExecutingAssembly());
             var connectionString = Configuration.GetConnectionString("database");
             services.AddDbContextPool<UniversityDbContext>(option =>
                 option.UseSqlServer(connectionString,

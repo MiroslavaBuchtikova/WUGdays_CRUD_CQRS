@@ -1,49 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
-using University.Persistence.Context;
+﻿using University.Persistence.Context;
 using University.Persistence.Entities.Students;
 
-namespace University.Persistence.Repositories;
-public sealed class StudentRepository : GenericRepository<Student>
+namespace University.Persistence.Repositories
 {
-    public StudentRepository(UniversityDbContext dbContext) : base(dbContext)
+    public sealed class StudentRepository : GenericRepository<Student>
     {
-    }
-
-    public Student GetBySSN(string ssn)
-    {
-        return DbContext.Students
-            .Include(x => x.Enrollments)
-            .ThenInclude(x => x.Course)
-            .Include(x => x.Disenrollments)
-            .FirstOrDefault(w => w.Ssn == ssn);
-    }
-
-    public IReadOnlyList<Student> GetList(string? courseName)
-    {
-        var result = DbContext.Students
-            .Include(x => x.Enrollments)
-            .ThenInclude(x => x.Course)
-            .Include(x => x.Disenrollments)
-            .ToList();
-
-        if (!string.IsNullOrWhiteSpace(courseName))
+        public StudentRepository(UniversityDbContext dbContext) : base(dbContext)
         {
-            result = result.Where(x => x.Enrollments.Any(e => e.Course.Name == courseName)).ToList();
         }
 
-        return result;
-    }
+        public void Save(Student student)
+        {
+            DbContext.Update(student);
+            DbContext.SaveChanges();
+        }
 
-    public void Save(Student student)
-    {
-        DbContext.Update(student);
-        DbContext.SaveChanges();
-    }
-
-    public void Delete(Student student)
-    {
-        DbContext.Remove(student);
-        DbContext.SaveChanges();
+        public void Delete(Student student)
+        {
+            DbContext.Remove(student);
+            DbContext.SaveChanges();
+        }
     }
 }
-

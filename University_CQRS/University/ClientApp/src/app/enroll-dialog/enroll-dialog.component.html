@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add/Update student</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="course1">Course</label>
+        <div class="input-group">
+          <div id="course1" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedCourse}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ng-container *ngFor="let course of courses">
+                <button ngbDropdownItem on-click="selectedCourse = course?.name">{{course.name}}</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="course1">Grade</label>
+        <div class="input-group">
+          <div id="credits1" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{selectedGrade}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ng-container *ngFor="let grade of grades">
+                <button ngbDropdownItem on-click="selectedGrade = grade">{{grade}}</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="passBack()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>

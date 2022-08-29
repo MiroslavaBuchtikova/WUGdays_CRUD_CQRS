@@ -9,6 +9,9 @@ const PROXY_CONFIG = [
       "/student",
       "/course"
    ],
+    pathRewrite: {
+      "^/api": ""
+    },
     target: target,
     secure: false,
     headers: {

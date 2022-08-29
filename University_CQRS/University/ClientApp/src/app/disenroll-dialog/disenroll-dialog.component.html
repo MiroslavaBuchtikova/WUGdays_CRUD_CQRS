@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add/Update student</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="comment">Comment</label>
+        <div class="input-group">
+          <input  id="comment" [(ngModel)]="comment" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="passBack()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>

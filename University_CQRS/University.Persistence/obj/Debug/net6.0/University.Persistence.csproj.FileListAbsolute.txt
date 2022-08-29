@@ -22,3 +22,6 @@
 /Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/obj/Debug/net6.0/refint/University.Persistence.dll
 /Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/obj/Debug/net6.0/University.Persistence.pdb
 /Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/obj/Debug/net6.0/ref/University.Persistence.dll
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/bin/Debug/net6.0/University.Contracts.dll
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/bin/Debug/net6.0/University.Contracts.pdb
+/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.CopyComplete

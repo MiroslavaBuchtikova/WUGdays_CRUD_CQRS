@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "po06p7QyH1rerD8BpHy+5ii18ex9KA+rt5wFcjnxcwiB+UoR111xXRP4ma4One+i5a3Vybp2Hgw2l+lRZrFiNA==",
+  "dgSpecHash": "2YUfM1rR1E0M4eb/IMpgywXEET/rt95q30M3kFK6nPlW3oYpid20hiM/lqf8gvLr4H2+cTwdVLFkkblxjQFFqg==",
   "success": true,
   "projectFilePath": "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/University.Persistence.csproj",
   "expectedPackageFiles": [

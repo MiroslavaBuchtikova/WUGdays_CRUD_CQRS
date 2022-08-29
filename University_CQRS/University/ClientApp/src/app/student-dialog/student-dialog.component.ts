@@ -4,30 +4,18 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {StudentDto} from '../models/student';
 import {CourseDto} from "../models/course";
 import {getGrades, Grades} from "../models/grade";
+import {NewStudentDto} from "../models/new-student";
+import {StudentTableComponent} from "../student-table/student-table.component";
 
 @Component({
   selector: 'app-student-dialog',
   templateUrl: './student-dialog.component.html'
 })
 export class StudentDialogComponent implements OnInit {
-
-  @Input() student: StudentDto = {
-    name: '',
-    ssn: '',
-    email: '',
-    course1: '',
-    course1Grade: '',
-    course1DisenrollmentComment: '',
-    course1Credits: null,
-
-    course2: '',
-    course2Grade: '',
-    course2DisenrollmentComment: '',
-    course2Credits: null
-  };
+  
   @Input() courses: CourseDto[] = [];
   @Input() update: boolean;
-  @Output() passEntry: EventEmitter<any> = new EventEmitter();
+  @Output() passEntry: EventEmitter<NewStudentDto> = new EventEmitter();
 
   public grades = getGrades();
   public selectedCourse1?: CourseDto;
@@ -35,6 +23,16 @@ export class StudentDialogComponent implements OnInit {
 
   public selectedCourse2?: CourseDto;
   public selectedGrade2?: Grades;
+  
+  public student: NewStudentDto = {
+    name: '',
+    ssn: '',
+    email: '',
+    course1: '',
+    course1Grade: '',
+    course2: '',
+    course2Grade: '',
+  };
 
   constructor(public activeModal: NgbActiveModal) {
   }
@@ -49,11 +47,9 @@ export class StudentDialogComponent implements OnInit {
 
   passBack() {
     this.student.course1 = this.selectedCourse1?.name;
-    this.student.course1Credits = this.selectedCourse1?.credits;
     this.student.course1Grade = this.selectedGrade1;
 
     this.student.course2 = this.selectedCourse2?.name;
-    this.student.course2Credits = this.selectedCourse2?.credits;
     this.student.course2Grade = this.selectedGrade2;
 
     this.passEntry.emit(this.student);

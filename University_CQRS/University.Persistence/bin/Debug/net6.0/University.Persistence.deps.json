@@ -9,7 +9,8 @@
       "University.Persistence/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "6.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
+          "University.Contracts": "1.0.0"
         },
         "runtime": {
           "University.Persistence.dll": {}
@@ -456,6 +457,11 @@
             "fileVersion": "4.700.19.56404"
           }
         }
+      },
+      "University.Contracts/1.0.0": {
+        "runtime": {
+          "University.Contracts.dll": {}
+        }
       }
     }
   },
@@ -744,6 +750,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "University.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

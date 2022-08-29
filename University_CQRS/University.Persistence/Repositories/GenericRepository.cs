@@ -1,14 +1,14 @@
-
 using University.Persistence.Context;
 
-namespace University.Persistence.Repositories;
-
-public abstract class GenericRepository<T>
+namespace University.Persistence.Repositories
 {
-    protected UniversityDbContext DbContext { get; }
-
-    public GenericRepository(UniversityDbContext dbContext)
+    public abstract class GenericRepository<T>
     {
-        DbContext = dbContext;
+        protected UniversityDbContext DbContext { get; }
+
+        public GenericRepository(UniversityDbContext dbContext)
+        {
+            DbContext = dbContext;
+        }
     }
 }

@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using University_CQRS.Queries;
+using University.Commands;
 using University.Contracts.Dtos;
-using University.Mapper;
-using University.Persistence.Context;
-using University.Persistence.Entities.Students;
-using University.Persistence.Repositories;
-using University.Services;
 
 namespace University.Controllers;
 
@@ -12,88 +10,66 @@ namespace University.Controllers;
 [Route("[controller]")]
 public class StudentController : ControllerBase
 {
-     private readonly StudentRepository _studentRepository;
-        private readonly CourseRepository _courseRepository;
-        private readonly StudentService _studentService;
-
-        public StudentController(UniversityDbContext dbContext, StudentService studentService)
+     private readonly IMediator _mediator;
+        public StudentController(IMediator mediator)
         {
-            _studentRepository = new StudentRepository(dbContext);
-            _courseRepository = new CourseRepository(dbContext);
-            _studentService = studentService;
+            _mediator = mediator;
         }
 
         [HttpGet]
-        public IActionResult Get(string courseName)
+        public IActionResult GetList(string courseName, int? numberOfCourses)
         {
-            var students = _studentRepository.GetList(courseName);
-            var dtos = students.Select(x => x.Map()).ToList();
+            var result = _mediator.Send(new GetListQuery(courseName, numberOfCourses));
 
-            return Ok(dtos);
+            return Ok(result.Result);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] StudentDto dto)
+        public IActionResult Register([FromBody] NewStudentDto dto)
         {
-            if(dto.Ssn == null)
-            {
-                return BadRequest($"SSN can't be null");
-            }
-            
-            var existingStudent = _studentRepository.GetBySSN(dto.Ssn);
-            if(existingStudent != null)
-            {
-                return BadRequest($"Student with SSN {dto.Ssn} already exists");
-            }
-            var student = new Student
-            {
-                Ssn = dto.Ssn,
-                Name = dto.Name,
-                Email = dto.Email
-            };
+            var result = _mediator.Send(new RegisterCommand(
+                 dto.SSN,
+                 dto.Name, dto.Email,
+                 dto.Course1, dto.Course1Grade,
+                 dto.Course2, dto.Course2Grade));
 
-            if (dto.Course1 != null && dto.Course1Grade != null)
-            {
-                var course = _courseRepository.GetByName(dto.Course1);
-                _studentService.Enroll(student, course, Enum.Parse<Grade>(dto.Course1Grade));
-            }
-
-            if (dto.Course2 != null && dto.Course2Grade != null)
-            {
-                var course = _courseRepository.GetByName(dto.Course2);
-                _studentService.Enroll(student, course, Enum.Parse<Grade>(dto.Course2Grade));
-            }
-
-            _studentRepository.Save(student);
-
-            return Ok(student.Map());
+            return Ok(result.Result);
         }
 
         [HttpDelete("{ssn}")]
-        public IActionResult Delete(string ssn)
+        public IActionResult Unregister(string ssn)
         {
-            var student = _studentRepository.GetBySSN(ssn);
-            if (student == null)
-                return BadRequest($"No student found for SSN {ssn}");
+            var result = _mediator.Send(new UnregisterCommand(ssn));
+            return Ok(result.Result);
+        }
 
-            _studentRepository.Delete(student);
+        [HttpPost("{ssn}/enrollments")]
+        public IActionResult Enroll(string ssn, [FromBody] StudentEnrollmentDto dto)
+        {
+            var result = _mediator.Send(new EnrollCommand(ssn, dto.Course, dto.Grade));
+            return Ok(result.Result);
+        }
 
-            return Ok();
+        [HttpPut("{ssn}/enrollments/{enrollmentIndex}")]
+        public IActionResult Transfer(
+          string ssn, int enrollmentIndex, [FromBody] StudentTransferDto dto)
+        {
+            var result = _mediator.Send(new TransferCommand(ssn, enrollmentIndex, dto.Course, dto.Grade));
+            return Ok(result.Result);
+        }
+
+        [HttpPost("{ssn}/enrollments/{enrollmentIndex}/disenroll")]
+        public IActionResult Disenroll(
+           string ssn, int enrollmentNumber, [FromBody] StudentDisenrollmentDto dto)
+        {
+            var result = _mediator.Send(new DisenrollCommand(ssn, enrollmentNumber, dto.Comment));
+            return Ok(result.Result);
         }
 
         [HttpPut("{ssn}")]
-        public IActionResult Update(string ssn, [FromBody] StudentDto dto)
+        public IActionResult EditPersonalInfo(string ssn, [FromBody] StudentPersonalInfoDto dto)
         {
-            var student = _studentRepository.GetBySSN(ssn);
-            if (student == null)
-                return BadRequest($"No student found for SSN {ssn}");
-
-            student.Name = dto.Name;
-            student.Email = dto.Email;
-
-            _studentService.AppendEnrollments(student, dto);
-            _studentRepository.Save(student);
-
-            return Ok(student.Map());
+            var result = _mediator.Send(new EditPersonalInfoCommand(ssn, dto.Name, dto.Email));
+            return Ok(result.Result);
         }
 }

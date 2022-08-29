@@ -4,6 +4,60 @@
     "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/University.Persistence.csproj": {}
   },
   "projects": {
+    "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Contracts/University.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Contracts/University.Contracts.csproj",
+        "projectName": "University.Contracts",
+        "projectPath": "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Contracts/University.Contracts.csproj",
+        "packagesPath": "/Users/buchtikova/.nuget/packages/",
+        "outputPath": "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/buchtikova/NuGet.Config",
+          "/Users/buchtikova/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://bluestepbank.pkgs.visualstudio.com/_packaging/BluestepNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/buchtikova/.dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Persistence/University.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +81,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Contracts/University.Contracts.csproj": {
+                "projectPath": "/Users/buchtikova/RiderProjects/Projects/WUGdays_University_CRUD_CQRS/University_CQRS/University.Contracts/University.Contracts.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

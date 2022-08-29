@@ -10,7 +10,7 @@ public static class StudentMapper
         var studentDto = new StudentDto
         {
             Id = student.Id,
-            Ssn = student.Ssn,
+            SSN = student.Ssn,
             Name = student.Name,
             Email = student.Email
         };

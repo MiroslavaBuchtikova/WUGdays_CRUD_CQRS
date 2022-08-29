@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add/Update student</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <label for="ssn">SSN</label>
+        <div class="input-group">
+          <input [disabled]="true" id="ssn" [(ngModel)]="ssn" type="text">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="name">Name</label>
+        <div class="input-group">
+          <input id="name" [(ngModel)]="personalInfo.name" type="text">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input id="email" [(ngModel)]="personalInfo.email" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="passBack()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>
