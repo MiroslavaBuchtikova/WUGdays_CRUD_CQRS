@@ -1,21 +1,21 @@
 import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {CourseDto} from "../models/course";
-import {getGrades, Grades} from "../models/grade";
-import {TransferDto} from "../models/transfer";
+import {CourseDto} from "../../models/course";
+import {EnrollmentDto} from "../../models/enrollment";
+import {getGrades} from "../../models/grade";
 
 @Component({
-  selector: 'app-transfer-dialog',
-  templateUrl: './transfer-dialog.component.html'
+  selector: 'app-enroll-dialog',
+  templateUrl: './enroll-dialog.component.html'
 })
-export class TransferDialogComponent {
+export class EnrollDialogComponent {
   @Input() courses: CourseDto[] = [];
-  @Input() selectedGrade: string = '';
-  @Input() selectedCourse: string = '';
-  
-  @Output() passEntry: EventEmitter<TransferDto> = new EventEmitter();
+  @Output() passEntry: EventEmitter<EnrollmentDto> = new EventEmitter();
 
   public grades = getGrades();
+  public selectedGrade: string;
+  public selectedCourse: string;
+
   constructor(public activeModal: NgbActiveModal) {
   }
 

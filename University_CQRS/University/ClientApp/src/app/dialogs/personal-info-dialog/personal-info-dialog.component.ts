@@ -1,9 +1,8 @@
 import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
 import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
-import {CourseDto} from "../models/course";
-import {getGrades, Grades} from "../models/grade";
-import {PersonalInfoDto} from "../models/personal-info";
-import {StudentDto} from "../models/student";
+import {PersonalInfoDto} from "../../models/personal-info";
+import {CourseDto} from "../../models/course";
+import {getGrades, Grades} from "../../models/grade";
 
 @Component({
   selector: 'app-personal-info-dialog',

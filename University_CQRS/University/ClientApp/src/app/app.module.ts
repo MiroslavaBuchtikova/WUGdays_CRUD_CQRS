@@ -6,12 +6,12 @@ import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {StudentDialogComponent} from "./student-dialog/student-dialog.component";
-import {StudentTableComponent} from "./student-table/student-table.component";
-import {EnrollDialogComponent} from "./enroll-dialog/enroll-dialog.component";
-import {TransferDialogComponent} from "./transfer-dialog/transfer-dialog.component";
-import {DisenrollDialogComponent} from "./disenroll-dialog/disenroll-dialog.component";
-import {PersonalInfoDialogComponent} from "./personal-info-dialog/personal-info-dialog.component";
+import {StudentTableComponent} from "./dialogs/student-table/student-table.component";
+import {TransferDialogComponent} from "./dialogs/transfer-dialog/transfer-dialog.component";
+import {EnrollDialogComponent} from "./dialogs/enroll-dialog/enroll-dialog.component";
+import {PersonalInfoDialogComponent} from "./dialogs/personal-info-dialog/personal-info-dialog.component";
+import {DisenrollDialogComponent} from "./dialogs/disenroll-dialog/disenroll-dialog.component";
+import {StudentDialogComponent} from "./dialogs/student-dialog/student-dialog.component";
 
 @NgModule({
     declarations: [

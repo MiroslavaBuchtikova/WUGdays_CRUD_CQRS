@@ -1,9 +1,6 @@
 import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {CourseDto} from "../models/course";
-import {getGrades, Grades} from "../models/grade";
-import {TransferDto} from "../models/transfer";
-import {DisenrollmentDto} from "../models/disenrollment";
+import {DisenrollmentDto} from "../../models/disenrollment";
 
 @Component({
   selector: 'app-disenroll-dialog',

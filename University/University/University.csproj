@@ -5,7 +5,7 @@
 <!--        <Nullable>enable</Nullable>-->
         <IsPackable>false</IsPackable>
         <SpaRoot>ClientApp\</SpaRoot>
-        <SpaProxyServerUrl>https://localhost:44478</SpaProxyServerUrl>
+        <SpaProxyServerUrl>https://localhost:44479</SpaProxyServerUrl>
         <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -35,6 +35,10 @@
     <ItemGroup>
       <ProjectReference Include="..\University.Contracts\University.Contracts.csproj" />
       <ProjectReference Include="..\University.Persistence\University.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ClientApp\.angular" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

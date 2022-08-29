@@ -33,7 +33,7 @@
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <ng-container *ngFor="let course of courses">
-                <button ngbDropdownItem on-click="setupCourse1(course)">{{course.name}}</button>
+                <button ngbDropdownItem on-click="selectedCourse1 = course">{{course.name}}</button>
               </ng-container>
             </div>
           </div>
@@ -62,7 +62,7 @@
 
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <ng-container *ngFor="let course of courses">
-                <button on-click="setupCourse2(course)" ngbDropdownItem>{{course.name}}</button>
+                <button on-click="selectedCourse2 = course" ngbDropdownItem>{{course.name}}</button>
                 </ng-container>
               </div>
 

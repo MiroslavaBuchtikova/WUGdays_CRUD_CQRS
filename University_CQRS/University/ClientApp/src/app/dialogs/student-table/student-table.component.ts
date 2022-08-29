@@ -2,17 +2,17 @@ import {Component, Inject} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {StudentDialogComponent} from "../student-dialog/student-dialog.component";
-import {StudentDto} from "../models/student";
-import {CourseDto} from "../models/course";
+import {StudentDto} from "../../models/student";
+import {CourseDto} from "../../models/course";
 import {EnrollDialogComponent} from "../enroll-dialog/enroll-dialog.component";
-import {Grades} from "../models/grade";
-import {EnrollmentDto} from "../models/enrollment";
+import {Grades} from "../../models/grade";
+import {EnrollmentDto} from "../../models/enrollment";
 import {TransferDialogComponent} from "../transfer-dialog/transfer-dialog.component";
-import {TransferDto} from "../models/transfer";
+import {TransferDto} from "../../models/transfer";
 import {DisenrollDialogComponent} from "../disenroll-dialog/disenroll-dialog.component";
-import {DisenrollmentDto} from "../models/disenrollment";
+import {DisenrollmentDto} from "../../models/disenrollment";
 import {PersonalInfoDialogComponent} from "../personal-info-dialog/personal-info-dialog.component";
-import {PersonalInfoDto} from "../models/personal-info";
+import {PersonalInfoDto} from "../../models/personal-info";
 
 @Component({
     selector: 'app-student-table',

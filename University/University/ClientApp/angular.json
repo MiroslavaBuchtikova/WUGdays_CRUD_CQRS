@@ -131,6 +131,9 @@
   },
   "defaultProject": "WUG_University_CRUD_CQRS",
   "cli": {
-    "analytics": "4b00cb98-12a8-4635-8b5b-ef7e222a8919"
+    "analytics": "4b00cb98-12a8-4635-8b5b-ef7e222a8919",
+    "cache": {
+      "enabled": false
+    }
   }
 }

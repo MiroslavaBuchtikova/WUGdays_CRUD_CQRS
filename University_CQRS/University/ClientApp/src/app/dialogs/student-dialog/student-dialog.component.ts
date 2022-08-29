@@ -1,11 +1,8 @@
 import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {StudentDto} from '../models/student';
-import {CourseDto} from "../models/course";
-import {getGrades, Grades} from "../models/grade";
-import {NewStudentDto} from "../models/new-student";
-import {StudentTableComponent} from "../student-table/student-table.component";
+import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {CourseDto} from "../../models/course";
+import {NewStudentDto} from "../../models/new-student";
+import {getGrades, Grades} from "../../models/grade";
 
 @Component({
   selector: 'app-student-dialog',
@@ -54,21 +51,5 @@ export class StudentDialogComponent implements OnInit {
 
     this.passEntry.emit(this.student);
     this.activeModal.close(this.student);
-  }
-
-  setupCourse1(course: CourseDto) {
-    this.selectedCourse1 = course;
-    if(this.selectedCourse1.name == '')
-    {
-      this.selectedGrade1 = null;
-    }
-  }
-
-  setupCourse2(course: CourseDto) {
-    this.selectedCourse2 = course;
-    if(this.selectedCourse2.name == '')
-    {
-      this.selectedGrade1 = null;
-    }
   }
 }

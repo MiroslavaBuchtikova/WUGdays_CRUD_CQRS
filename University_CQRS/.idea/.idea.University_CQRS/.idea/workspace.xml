@@ -5,91 +5,29 @@
     <projectFile profileName="IIS Express">University/University.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8097b56-344f-458a-bcac-8032bfe96ac0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/University.Contracts/Dtos/NewStudentDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Contracts/Dtos/ResultDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Contracts/Dtos/StudentDisenrollmentDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Contracts/Dtos/StudentEnrollmentDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Contracts/Dtos/StudentPersonalInfoDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Contracts/Dtos/StudentTransferDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Persistence/Repositories/StudentReadRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Contracts.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Contracts.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/dist/main.c149baf7bfeb8846.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/disenroll-dialog/disenroll-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/disenroll-dialog/disenroll-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/enroll-dialog/enroll-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/enroll-dialog/enroll-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/models/disenrollment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/models/enrollment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/models/new-student.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/models/personal-info.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/models/transfer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/personal-info-dialog/personal-info-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/personal-info-dialog/personal-info-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/transfer-dialog/transfer-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/ClientApp/src/app/transfer-dialog/transfer-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Commands/DisenrollCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Commands/EditPersonalInfoCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Commands/EnrollCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Commands/RegisterCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Commands/TransferCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Commands/UnregisterCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/DiSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/DisenrollCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/EnrollCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/GetListQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/PersonalInfoCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/RegisterCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/TransferCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Handlers/UnregisterCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/University/Queries/GetListQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../University/University.Contracts/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../University/University.Contracts/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../University/University.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../University/University.Persistence/obj/rider.project.restore.info" afterDir="false" />
+    <list default="true" id="f8097b56-344f-458a-bcac-8032bfe96ac0" name="Changes" comment="CQRS - add logic, html">
+      <change afterPath="$PROJECT_DIR$/../University/University/ClientApp/.angular/cache/14.1.3/angular-webpack/9f577024a0d9d1ff3eafc244669256380de164b5/0.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../University/University/ClientApp/.angular/cache/14.1.3/angular-webpack/9f577024a0d9d1ff3eafc244669256380de164b5/1.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../University/University/ClientApp/.angular/cache/14.1.3/angular-webpack/9f577024a0d9d1ff3eafc244669256380de164b5/index.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../University/University/ClientApp/.angular/cache/14.1.3/angular-webpack/9f577024a0d9d1ff3eafc244669256380de164b5/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../University/University/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../University/University/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../University/University/ClientApp/src/app/student-table/student-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../University/University/ClientApp/src/app/student-table/student-table.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../University/University/University.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../University/University/University.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.University_CQRS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.University_CQRS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/Dtos/StudentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/Dtos/StudentDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/bin/Debug/net6.0/University.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/bin/Debug/net6.0/University.Contracts.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/bin/Debug/net6.0/University.Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/bin/Debug/net6.0/University.Contracts.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/University.Contracts.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/University.Contracts.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/University.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/University.Contracts.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/University.Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/University.Contracts.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/ref/University.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/ref/University.Contracts.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/refint/University.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/obj/Debug/net6.0/refint/University.Contracts.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Contracts/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/University.Contracts/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/Repositories/CourseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/Repositories/CourseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/Repositories/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/Repositories/GenericRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/Repositories/StudentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/Repositories/StudentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/University.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/University.Persistence.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Persistence.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Persistence.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/bin/Debug/net6.0/University.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/University.Persistence.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/ref/University.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/ref/University.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/refint/University.Persistence.dll" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/Debug/net6.0/refint/University.Persistence.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/University.Persistence.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/University.Persistence.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/University.Persistence/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/University/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/dist/main.674a21d73922d979.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/node_modules/__ngcc_entry_points__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/proxy.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/proxy.conf.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-dialog/student-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/student-dialog/student-dialog.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-dialog/student-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/student-dialog/student-dialog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-table/student-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/student-table/student-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-table/student-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/student-table/student-table.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University/Controllers/StudentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/Mapper/StudentMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University/Mapper/StudentMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/University/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/disenroll-dialog/disenroll-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/disenroll-dialog/disenroll-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/disenroll-dialog/disenroll-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/disenroll-dialog/disenroll-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/enroll-dialog/enroll-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/enroll-dialog/enroll-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/enroll-dialog/enroll-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/enroll-dialog/enroll-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/personal-info-dialog/personal-info-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/personal-info-dialog/personal-info-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/personal-info-dialog/personal-info-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/personal-info-dialog/personal-info-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-dialog/student-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/student-dialog/student-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-dialog/student-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/student-dialog/student-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-table/student-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/student-table/student-table.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/student-table/student-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/student-table/student-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/transfer-dialog/transfer-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/transfer-dialog/transfer-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/ClientApp/src/app/transfer-dialog/transfer-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/University/ClientApp/src/app/dialogs/transfer-dialog/transfer-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/University/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/University/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/University/University.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/University/University.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661798272801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="CQRS - add logic, html">
+      <created>1661808299469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661808299469</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +146,19 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add CQRS approach" />
     <MESSAGE value="Add to gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to gitignore" />
+    <MESSAGE value="CQRS - add logic, html" />
+    <option name="LAST_COMMIT_MESSAGE" value="CQRS - add logic, html" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/University/ClientApp/src/app/app.module.ts</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
