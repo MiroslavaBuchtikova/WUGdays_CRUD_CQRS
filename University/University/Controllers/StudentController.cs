@@ -12,88 +12,89 @@ namespace University.Controllers;
 [Route("[controller]")]
 public class StudentController : ControllerBase
 {
-     private readonly StudentRepository _studentRepository;
-        private readonly CourseRepository _courseRepository;
-        private readonly StudentService _studentService;
+    private readonly StudentRepository _studentRepository;
+    private readonly CourseRepository _courseRepository;
+    private readonly StudentService _studentService;
 
-        public StudentController(UniversityDbContext dbContext, StudentService studentService)
+    public StudentController(UniversityDbContext dbContext, StudentService studentService)
+    {
+        _studentRepository = new StudentRepository(dbContext);
+        _courseRepository = new CourseRepository(dbContext);
+        _studentService = studentService;
+    }
+
+    [HttpGet]
+    public IActionResult Get(string courseName)
+    {
+        var students = _studentRepository.GetList(courseName);
+        var dtos = students.Select(x => x.Map()).ToList();
+
+        return Ok(dtos);
+    }
+
+    [HttpPost]
+    public IActionResult Create([FromBody] StudentDto dto)
+    {
+        if (dto.Ssn == null)
         {
-            _studentRepository = new StudentRepository(dbContext);
-            _courseRepository = new CourseRepository(dbContext);
-            _studentService = studentService;
+            return BadRequest($"SSN can't be null");
         }
 
-        [HttpGet]
-        public IActionResult Get(string courseName)
+        var existingStudent = _studentRepository.GetBySSN(dto.Ssn);
+        if (existingStudent != null)
         {
-            var students = _studentRepository.GetList(courseName);
-            var dtos = students.Select(x => x.Map()).ToList();
-
-            return Ok(dtos);
+            return BadRequest($"Student with SSN {dto.Ssn} already exists");
         }
 
-        [HttpPost]
-        public IActionResult Create([FromBody] StudentDto dto)
+        var student = new Student
         {
-            if(dto.Ssn == null)
-            {
-                return BadRequest($"SSN can't be null");
-            }
-            
-            var existingStudent = _studentRepository.GetBySSN(dto.Ssn);
-            if(existingStudent != null)
-            {
-                return BadRequest($"Student with SSN {dto.Ssn} already exists");
-            }
-            var student = new Student
-            {
-                Ssn = dto.Ssn,
-                Name = dto.Name,
-                Email = dto.Email
-            };
+            Ssn = dto.Ssn,
+            Name = dto.Name,
+            Email = dto.Email
+        };
 
-            if (dto.Course1 != null && dto.Course1Grade != null)
-            {
-                var course = _courseRepository.GetByName(dto.Course1);
-                _studentService.Enroll(student, course, Enum.Parse<Grade>(dto.Course1Grade));
-            }
-
-            if (dto.Course2 != null && dto.Course2Grade != null)
-            {
-                var course = _courseRepository.GetByName(dto.Course2);
-                _studentService.Enroll(student, course, Enum.Parse<Grade>(dto.Course2Grade));
-            }
-
-            _studentRepository.Save(student);
-
-            return Ok(student.Map());
+        if (dto.Course1 != null && dto.Course1Grade != null)
+        {
+            var course = _courseRepository.GetByName(dto.Course1);
+            _studentService.Enroll(student, course, Enum.Parse<Grade>(dto.Course1Grade));
         }
 
-        [HttpDelete("{ssn}")]
-        public IActionResult Delete(string ssn)
+        if (dto.Course2 != null && dto.Course2Grade != null)
         {
-            var student = _studentRepository.GetBySSN(ssn);
-            if (student == null)
-                return BadRequest($"No student found for SSN {ssn}");
-
-            _studentRepository.Delete(student);
-
-            return Ok();
+            var course = _courseRepository.GetByName(dto.Course2);
+            _studentService.Enroll(student, course, Enum.Parse<Grade>(dto.Course2Grade));
         }
 
-        [HttpPut("{ssn}")]
-        public IActionResult Update(string ssn, [FromBody] StudentDto dto)
-        {
-            var student = _studentRepository.GetBySSN(ssn);
-            if (student == null)
-                return BadRequest($"No student found for SSN {ssn}");
+        _studentRepository.Save(student);
 
-            student.Name = dto.Name;
-            student.Email = dto.Email;
+        return Ok(student.Map());
+    }
 
-            _studentService.AppendEnrollments(student, dto);
-            _studentRepository.Save(student);
+    [HttpDelete("{ssn}")]
+    public IActionResult Delete(string ssn)
+    {
+        var student = _studentRepository.GetBySSN(ssn);
+        if (student == null)
+            return BadRequest($"No student found for SSN {ssn}");
 
-            return Ok(student.Map());
-        }
+        _studentRepository.Delete(student);
+
+        return Ok();
+    }
+
+    [HttpPut("{ssn}")]
+    public IActionResult Update(string ssn, [FromBody] StudentDto dto)
+    {
+        var student = _studentRepository.GetBySSN(ssn);
+        if (student == null)
+            return BadRequest($"No student found for SSN {ssn}");
+
+        student.Name = dto.Name;
+        student.Email = dto.Email;
+
+        _studentService.AppendEnrollments(student, dto);
+        _studentRepository.Save(student);
+
+        return Ok(student.Map());
+    }
 }

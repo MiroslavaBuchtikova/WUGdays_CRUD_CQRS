@@ -72,7 +72,7 @@ export class StudentDialogComponent implements OnInit {
     this.selectedCourse2 = course;
     if(this.selectedCourse2.name == '')
     {
-      this.selectedGrade1 = null;
+      this.selectedGrade2 = null;
     }
   }
 }
